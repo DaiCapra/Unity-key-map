@@ -28,9 +28,24 @@ namespace Keymap.Runtime
         }
 
 
+        public bool ContainsTranslation(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                return false;
+            }
+
+            return _translationMap.ContainsKey(name);
+        }
+
         public bool TryGet(string name, out Sprite sprite)
         {
             sprite = null;
+            if (string.IsNullOrEmpty(name))
+            {
+                return false;
+            }
+
             var n = name.ToLower();
 
             if (_translationMap.ContainsKey(n))
@@ -49,6 +64,11 @@ namespace Keymap.Runtime
 
         protected void AppendTranslationValues(string append)
         {
+            if (string.IsNullOrEmpty(append))
+            {
+                return;
+            }
+
             var modified = _translationMap
                 .Select(kv => new KeyValuePair<string, string>(kv.Key, $"{kv.Value}{append}"))
                 .ToArray();

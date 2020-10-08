@@ -8,11 +8,11 @@ namespace Keymap.Runtime.Example
     {
         [SerializeField] private Image image;
 
-        private KeyboardDarkMap _map;
+        private KeyboardMouseDarkMap _map;
 
         public void Start()
         {
-            _map = new KeyboardDarkMap();
+            _map = new KeyboardMouseDarkMap();
 
             var key = KeyCode.Escape;
             if (_map.TryGet(key.ToString(), out var sprite))

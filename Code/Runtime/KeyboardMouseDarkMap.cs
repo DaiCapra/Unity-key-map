@@ -2,9 +2,9 @@
 
 namespace Keymap.Runtime
 {
-    public class KeyboardDarkMap : KeyMap
+    public class KeyboardMouseDarkMap : KeyMap
     {
-        public KeyboardDarkMap()
+        public KeyboardMouseDarkMap()
         {
             var pathTranslation = $"{PathTranslations}/Keyboard";
             var pathSprites = $"{PathPrompts}/Keyboard & Mouse/Dark";
