@@ -1,0 +1,9 @@
+{
+	"name":"com.artmann.key-map",
+	"version":"1.0.0",
+	"displayName":"Key map",
+	"dependencies":
+	{
+		"com.unity.nuget.newtonsoft-json":"2.0.0"
+	}
+}
